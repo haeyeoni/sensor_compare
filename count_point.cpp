@@ -22,11 +22,14 @@ public:
     CountPoints() {
         this->subscriber = this->nh.subscribe("/velodyne_points", 10, &CountPoints::PointsInBounary, this);
         this->publisher = this->nh.advertise<sensor_msgs::PointCloud2> ("points_inside", 10);
+        this->publisher2 = this->nh.advertise<std_msgs::Int32> ("num_points", 10);
     };
 
     void PointsInBounary(const sensor_msgs::PointCloud2 &cloud_msg) {
-        sensor_msgs::PointCloud2 points_out;
         pcl::PointXYZ origin(distance, 0, 0);
+        
+        sensor_msgs::PointCloud2 points_out;
+        std_msgs::Int32 num_points;
 
         PointCloudPtr cloud(new PointCloud); 
         PointCloud2Ptr cloud2(new PointCloud2);
@@ -53,7 +56,10 @@ public:
         }
         pcl::toROSMsg(result, points_out);
         points_out.header.frame_id = "velodyne";
+        num_points.data = result.size();
+        cout<< result.size();
         this->publisher.publish(points_out);
+        this->publisher2.publish(num_points);
     }
     ~CountPoints(){
     }
@@ -61,6 +67,7 @@ public:
         ros::NodeHandle nh;
         ros::Subscriber subscriber;
         ros::Publisher publisher;
+        ros::Publisher publisher2;
 };
 
 int main(int argc, char **argv)
