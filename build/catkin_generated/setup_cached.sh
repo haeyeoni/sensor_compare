@@ -8,5 +8,7 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/haeyeon/sensor_compare/build/devel:$CMAKE_PREFIX_PATH"
+export PATH="/opt/ros/melodic/bin:/home/haeyeon/.local/bin:/home/haeyeon/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export PWD="/home/haeyeon/sensor_compare/build"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/haeyeon/sensor_compare/build/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/haeyeon/sensor_compare:$ROS_PACKAGE_PATH"

@@ -9,10 +9,6 @@
 /home/haeyeon/sensor_compare/count_point.cpp
 count_point.h
 /home/haeyeon/sensor_compare/count_point.h
-ros/ros.h
--
-sstream
--
 
 /home/haeyeon/sensor_compare/count_point.h
 ros/ros.h
@@ -67,7 +63,13 @@ pcl/filters/extract_indices.h
 -
 pcl/kdtree/kdtree_flann.h
 -
+iostream
+-
+fstream
+-
 pcl_ros/transforms.h
+-
+stdio.h
 -
 
 /opt/ros/melodic/include/geometry_msgs/Point.h

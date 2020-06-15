@@ -3,11 +3,9 @@
 //
 
 #include "count_point.h"
-#include <ros/ros.h>
-#include <sstream>
 
 
-int distance = 3;
+int distance;
 double length = 1;
 double width = 1;
 double height = -0.5;
@@ -57,7 +55,7 @@ public:
         pcl::toROSMsg(result, points_out);
         points_out.header.frame_id = "velodyne";
         num_points.data = result.size();
-        cout<< result.size();
+        //cout<< result.size();
         this->publisher.publish(points_out);
         this->publisher2.publish(num_points);
     }
@@ -72,9 +70,13 @@ public:
 
 int main(int argc, char **argv)
 {
+
     ros::init(argc, argv, "talker");
+    distance = atoi(argv[1]);
+    printf("print %d", distance);    
     CountPoints CountPoints;
     while(1) {
-        ros::spinOnce();
-    }
+         ros::spinOnce();
+    } 
+    return 0;
 }

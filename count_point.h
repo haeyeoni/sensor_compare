@@ -30,5 +30,8 @@
 #include <pcl/sample_consensus/sac_model_plane.h>
 #include <pcl/filters/extract_indices.h>
 #include <pcl/kdtree/kdtree_flann.h>
+#include <iostream>
+#include <fstream>
 #include <pcl_ros/transforms.h>
+#include <stdio.h>
 #endif //SENSOR_COMPARE_COUNT_POINT_H
