@@ -16,6 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
   visualization_msgs
   std_msgs
   genmsg
+  laser_geometry
 )
 
 include_directories(
@@ -29,7 +30,7 @@ include_directories(
 )
 
 set(G2O_LIBS g2o_core g2o_stuff g2o_types_sba g2o_types_slam3d)
-add_executable(sensor_compare count_point.cpp count_point.h)
+add_executable(sensor_compare count_point_hps.cpp count_point.h)
 
 target_link_libraries(sensor_compare
         ${PCL_LIBRARIES}

@@ -8,7 +8,9 @@
 #include <sstream>
 #include <sensor_msgs/PointCloud.h>
 #include <sensor_msgs/PointCloud2.h>
+#include <sensor_msgs/LaserScan.h>
 #include <sensor_msgs/point_cloud_conversion.h>
+#include <laser_geometry/laser_geometry.h>
 #include <std_msgs/Int32.h>
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_types.h>
@@ -30,8 +32,8 @@
 #include <pcl/sample_consensus/sac_model_plane.h>
 #include <pcl/filters/extract_indices.h>
 #include <pcl/kdtree/kdtree_flann.h>
-#include <iostream>
 #include <fstream>
 #include <pcl_ros/transforms.h>
 #include <stdio.h>
+#include <stdlib.h>
 #endif //SENSOR_COMPARE_COUNT_POINT_H

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sensor_compare.dir/count_point.cpp.o"
+  "CMakeFiles/sensor_compare.dir/count_point_hps.cpp.o"
   "sensor_compare.pdb"
   "sensor_compare"
 )
